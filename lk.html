@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="/vite.svg"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.15.22/dist/css/uikit.min.css"/>
+    <title>Title</title>
+</head>
+<body>
+<div class="uk-container">
+    <!--    <tbody>-->
+    <!--    <tr>-->
+    <!--        <td colspan="2" valign="top">-->
+    <!--            <div class="uk-panel uk-background-default uk-box-shadow-small uk-border-rounded uk-preserve-color" style="background-color: #009933; margin-bottom: 10px;">-->
+    <!--                <nav class="uk-navbar-container uk-margin uk-navbar-transparent uk-light uk-navbar" uk-navbar="">-->
+    <!--                    <div class="uk-navbar-left">-->
+    <!--                        <a class="uk-navbar-item uk-logo" href="#"><img src="images/logo_silinet_rus.png" width="270"></a>-->
+    <!--                        <ul class="uk-navbar-nav" style="margin-left: 60px;">-->
+    <!--                            <li><a href="https://www.silinet.ru/" style="color: white;">На сайт</a></li>-->
+    <!--                            <li><a href="https://www.silinet.ru/promo.html" style="color: white;">Акции</a></li>-->
+    <!--                            <li>-->
+    <!--                                <a href="https://www.silinet.ru/set/settings.html" style="color: white;">Настройки</a>-->
+    <!--                            </li>-->
+    <!--                            <li>-->
+    <!--                                <a href="https://www.silinet.ru/ip-tv/iptv.html" style="color: white;">Телевидение</a>-->
+    <!--                            </li>-->
+    <!--                            <li><a href="https://www.silinet.ru/contacts.html" style="color: white;">Контакты</a>-->
+    <!--                            </li>-->
+    <!--                        </ul>-->
+    <!--                    </div>-->
+    <!--                </nav>-->
+    <!--            </div>-->
+    <!--        </td>-->
+    <!--    </tr>-->
+    <main>
+        <div class="uk-panel uk-text-left uk-background-default uk-padding-small uk-border-rounded uk-box-shadow-small"
+             id="main-menu2">
+            <ul class="uk-nav uk-nav-default">
+                <li class="main_menu_item" id="menu_item_info" style="background-color: rgb(232, 232, 232);">
+                    <a href="?plugin=info" uk-tooltip="title: Информация о подключенных услугах; pos: left" title=""
+                       aria-describedby="uk-tooltip-1">Общая информация</a>
+                </li>
+                <li class="main_menu_item" id="menu_item_pay_services">
+                    <a href="?plugin=pay_services" uk-tooltip="title: Пополнение счета различными методами; pos: left"
+                       title="" aria-describedby="uk-tooltip-2">Пополнение счета</a>
+                </li>
+                <li class="main_menu_item" id="menu_item_promised_payment">
+                    <a href="?plugin=promised_payment" uk-tooltip="title: Обещанный платеж; pos: left" title=""
+                       aria-describedby="uk-tooltip-3">Обещанный платеж</a>
+                </li>
+                <li class="main_menu_item" id="menu_item_transfer">
+                    <a href="?plugin=transfer" uk-tooltip="title: Перевод на другой счет; pos: left" title=""
+                       aria-describedby="uk-tooltip-4">Перевод между счетами</a>
+                </li>
+                <li class="main_menu_item" id="menu_item_services">
+                    <a href="?plugin=services" uk-tooltip="title: Подключение дополнительных услуг; pos: left" title=""
+                       aria-describedby="uk-tooltip-5">Услуги</a>
+                </li>
+                <li class="main_menu_item" id="menu_item_payment">
+                    <a href="?plugin=payment" uk-tooltip="title: Список поступивших платежей; pos: left" title=""
+                       aria-describedby="uk-tooltip-6">Отчет по платежам</a>
+                </li>
+                <li class="main_menu_item" id="menu_item_services_report">
+                    <a href="?plugin=services_report" uk-tooltip="title: Отчет по списаниям за услуги; pos: left"
+                       title="" aria-describedby="uk-tooltip-7">Отчет по списаниям</a>
+                </li>
+                <li class="main_menu_item" id="menu_item_traffic_report">
+                    <a href="?plugin=traffic_report" uk-tooltip="title: Отчет по использованному трафику; pos: left"
+                       title="" aria-describedby="uk-tooltip-8">Отчет по трафику</a>
+                </li>
+                <li class="main_menu_item" id="menu_item_rent">
+                    <a href="?plugin=rent" uk-tooltip="title: Аренда оборудования; pos: left" title=""
+                       aria-describedby="uk-tooltip-9">Аренда оборудования</a>
+                </li>
+                <!--
+                <li class = "main_menu_item" id = "menu_item_rentsoft">
+                    <a href = "?plugin=rentsoft" uk-tooltip = "title: Аренда программ через Rentsoft.ru; pos: left">Аренда программ</a>
+                </li>-->
+                <li class="main_menu_item" id="menu_item_tariff">
+                    <a href="?plugin=tariff" uk-tooltip="title: Смена тарифа на следующий отчетный период; pos: left"
+                       title="" aria-describedby="uk-tooltip-10">Сменить тариф</a>
+                </li>
+                <li class="main_menu_item" id="menu_item_password">
+                    <a href="?plugin=password" uk-tooltip="title: Смена пароля доступа в личный кабинет; pos: left"
+                       title="" aria-describedby="uk-tooltip-11">Сменить пароль</a>
+                </li>
+                <li class="main_menu_item" id="menu_item_block">
+                    <a href="?plugin=block" uk-tooltip="title: Добровольная блокировка; pos: left" title=""
+                       aria-describedby="uk-tooltip-12">Блокировка</a>
+                </li>
+                <li class="main_menu_item" id="menu_item_message">
+                    <a href="?plugin=message" uk-tooltip="title: Отправка сообщений администрации; pos: left" title=""
+                       aria-describedby="uk-tooltip-13">Сообщения</a>
+                </li>
+                <li class="main_menu_item" id="menu_item_contacts">
+                    <a href="?plugin=contacts" uk-tooltip="title: Изменение контактной информации; pos: left" title=""
+                       aria-describedby="uk-tooltip-14">Мои контакты</a>
+                </li>
+                <li class="uk-nav-divider"></li>
+                <li class="main_menu_item">
+                    <a href="/info.php?plugin=logout" uk-tooltip="title: Выход из личного кабинета; pos: left" title=""
+                       aria-describedby="uk-tooltip-15"><strong><font color="#009900">Выход</font></strong></a>
+                </li>
+            </ul>
+        </div>
+        <div class="uk-panel uk-background-default uk-box-shadow-small uk-padding-small uk-border-rounded">
+            <ul class="uk-list uk-list-divider">
+                <li>
+                    <strong>Герасимов Кирилл Юрьевич</strong>
+                </li>
+                <li>
+                    <span style="width: 150px;">Адрес:</span>
+                    <span><strong>Подольск, Быковская 15 </strong></span>
+                </li>
+                <li>
+                    <span>Ваш баланс:</span>
+                    <span><strong>7,28 р.</strong></span>
+                </li>
+                <li>
+                    <span>Лицевой счёт:</span>
+                    <strong>11959</strong>
+                </li>
+                <li>
+                    <span>Статус:</span>
+                    <strong>Активен</strong>
+                </li>
+                <li>
+                    <span>Оплачено до:</span>
+                    <strong>--.--.----</strong>
+                </li>
+            </ul>
+        </div>
+
+        <div class="uk-panel uk-background-default uk-box-shadow-small uk-padding-small uk-border-rounded">
+                <div>
+                    <span class="uk-table-expand">Услуга</span>
+                    <span class="uk-table-shrink">Аб.плата</span>
+                    <span class="uk-table-shrink uk-text-nowrap">Списано в текущем месяце</span>
+                </div>
+                    <div><a uk-tooltip="title: Нажмите, чтобы увидеть информацию о трафике; pos: right"
+                           href="?plugin=traffic_report&amp;action=show_traf&amp;id=32015" title=""
+                           aria-describedby="uk-tooltip-16">admins</a> (0 Мбит/c)
+                    </div>
+                    <span class="uk-text-nowrap"><strong>0,00</strong> р.</span>
+                    <span class="uk-text-nowrap"><strong>0,00</strong> р.</span>
+        </div>
+
+        <div class="uk-panel uk-background-default uk-padding-small uk-border-rounded uk-box-shadow-small uk-text-left"
+             style="margin-top: 3px; font-size: 12px">
+            <span class="uk-label uk-label-warning">Внимание</span>&nbsp;Все операции, осуществляемые через личный
+            кабинет, считаются самостоятельными
+            действиями абонента и фиксируются на сервере. Ни при каких обстоятельствах не передавайте логин и пароль
+            другим лицам!
+        </div>
+    </main>
+    <!--    </tbody>-->
+</div>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.15.22/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.15.22/dist/js/uikit-icons.min.js"></script>
+<script type="module" src="/main.js"></script>
+</body>
+</html>
