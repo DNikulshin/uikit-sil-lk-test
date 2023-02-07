@@ -1,194 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.15.22/dist/css/uikit.min.css" />
-    <title>uikit-test</title>
-  </head>
-  <body>
-    <body>
-<div class="uk-panel uk-box-shadow-large uk-padding uk-align-center uk-text-center uk-margin-top uk-background-default" style="width: 370px">
-	<a class="uk-logo" href="https://www.silinet.ru" style="border-bottom: none">
-		<img alt="www.silinet.ru" class="uk-margin-bottom" src="images/logo_spotlight.png" title="www.silinet.ru">
-	</a>
-	<ul uk-tab="" class="uk-tab">
-		<li class="uk-active uk-width-1-2">
-			<a href="https://stat.silinet.net" onclick="window.location.href='https://stat.silinet.net'" aria-expanded="true">Личный</a>
-		</li>
-		<li class="uk-width-1-2">
-			<a href="https://b2b.silinet.net" onclick="window.location.href='https://b2b.silinet.net'" aria-expanded="false">Корпоративный</a>
-		</li>
-	</ul>
-	<form action="/index.php" class="uk-form-stacked" id="loginform" method="post" onsubmit="set_pass();" style="margin-top: 10px;">
-		<div class="uk-margin">
-			<div class="uk-form-controls">
-				<div class="uk-inline"><span class="uk-form-icon uk-icon" uk-icon="icon: user"><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><circle fill="none" stroke="#000" stroke-width="1.1" cx="9.9" cy="6.4" r="4.4"></circle><path fill="none" stroke="#000" stroke-width="1.1" d="M1.5,19 C2.3,14.5 5.8,11.2 10,11.2 C14.2,11.2 17.7,14.6 18.5,19.2"></path></svg></span>
-					<input class="uk-input " id="login" name="login" placeholder="Логин, email или телефон" style="width: 275px;" tabindex="1">
-				</div>
-			</div>
+<head>
+	<meta charset="UTF-8">
+	<link rel="icon" type="image/svg+xml" href="/vite.svg"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.15.22/dist/css/uikit.min.css"/>
+	<title>Title</title>
+</head>
+<body>
+	<header class="header box-shadow">
+		<div class="logo" style="background-color: #009933; padding-bottom: 1rem;">
+			<a class="uk-navbar-item uk-logo" href="#">
+				<img class="logo-img" src="images/logo_silinet_rus.svg" alt="logo"/>
+			</a>
 		</div>
-		<div class="uk-margin" id="pass_hide">
-			<div class="uk-form-controls">
-				<div class="uk-inline">
-					<span class="uk-form-icon uk-icon" uk-icon="icon: lock"><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><rect fill="none" stroke="#000" height="10" width="13" y="8.5" x="3.5"></rect><path fill="none" stroke="#000" d="M6.5,8 L6.5,4.88 C6.5,3.01 8.07,1.5 10,1.5 C11.93,1.5 13.5,3.01 13.5,4.88 L13.5,8"></path></svg></span><a href="#" tabindex="-1"><span class="uk-form-icon uk-form-icon-flip" style="pointer-events: auto">
-          <svg class="icon" height="20" id="showPass" style="opacity: 0.5;" version="1.1" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
-            <path d="M939.149497 510.439458l-54.585199-65.061808c28.655643-34.506908 52.543703-73.573669 70.564126-116.711142 6.450922-15.44476-0.828878-33.177634-16.273638-39.627533-15.504112-6.470365-33.177634 0.848321-39.628556 16.272615-63.970964 153.150052-212.879412 248.284783-388.612809 248.284783-177.175235 0-326.142012-95.351672-388.78984-248.837368-6.311753-15.504112-23.966854-22.959921-39.49041-16.60826-15.504112 6.310729-22.940478 24.00574-16.60826 39.49041 18.414395 45.116547 43.909046 85.984327 74.863035 121.939213l-51.074236 60.857043c-10.750855 12.802584-9.074679 31.915897 3.747347 42.686195 5.661953 4.754281 12.58462 7.082302 19.448958 7.082302 8.639774 0 17.240663-3.689019 23.237237-10.829649l47.321772-56.385195c32.82357 29.130458 69.980841 53.507658 110.266359 72.688509l-28.918633 79.443353c-5.740748 15.722076 2.367931 33.099862 18.108426 38.819121 3.412726 1.243317 6.90527 1.835811 10.355859 1.835811 12.367679 0 23.986297-7.633864 28.464285-19.943215l28.260647-77.636195c41.361013 13.721513 85.125773 22.301935 130.508379 24.927739L480.314347 705.09174c0 16.726963 13.571087 30.29805 30.29805 30.29805 16.727986 0 30.299073-13.571087 30.299073-30.29805l0-91.929736c48.130184-2.686179 94.199429-11.789511 137.362484-26.612101l28.864398 79.287811c4.477988 12.308327 16.095583 19.943215 28.463262 19.943215 3.452635 0 6.944156-0.592494 10.355859-1.835811 15.740496-5.719258 23.847128-23.098068 18.108426-38.819121l-29.809933-81.890079c39.653115-19.520589 76.002998-44.271296 108.165512-73.80596l50.293453 59.948347c5.997598 7.140631 14.576997 10.829649 23.237237 10.829649 6.864338 0 13.769608-2.328022 19.449981-7.082302C948.224176 542.355355 949.899328 523.259438 939.149497 510.439458L939.149497 510.439458z"></path>
-          </svg>
-          </span></a>
-					<input class="uk-input" id="password" name="password" placeholder="Пароль" style="width: 275px;" tabindex="2" type="password">
-				</div>
-			</div>
-		</div>
-		<div class="uk-margin" id="pass_show" style="display: none;">
-			<div class="uk-form-controls">
-				<div class="uk-inline">
-					<span class="uk-form-icon uk-icon" uk-icon="icon: lock"><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><rect fill="none" stroke="#000" height="10" width="13" y="8.5" x="3.5"></rect><path fill="none" stroke="#000" d="M6.5,8 L6.5,4.88 C6.5,3.01 8.07,1.5 10,1.5 C11.93,1.5 13.5,3.01 13.5,4.88 L13.5,8"></path></svg></span><a href="#" tabindex="-1"><span class="uk-form-icon uk-form-icon-flip" style="pointer-events: auto">
-          <svg class="icon" height="20" id="hidePass" style="opacity: 0.5;" version="1.1" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
-            <path d="M643.607922 427.375647c0 29.882588-22.602787 53.80851-50.995441 53.80851-28.328185 0-51.393507-23.893176-51.393507-53.80851 0-29.452799 23.065322-53.378721 51.393507-53.378721 3.573385 0 6.684236 1.38965 10.224875 1.854231-25.712615-18.829857-57.183374-30.346145-90.838891-30.346145-87.761809 0-158.645207 74.524321-158.645207 166.521594 0 91.518367 70.88442 166.039617 158.645207 166.039617 87.727017 0 158.645207-74.521251 158.645207-166.039617 0-33.952276-10.193153-67.110467-29.254278-95.239108 0.89437 3.704368 2.218528 6.91448 2.218528 10.588149z m308.388672 68.533886c-73.995271-140.742465-248.591775-282.875602-439.998129-282.875602-191.440124 0-366.035604 142.133138-439.567317 282.875602l-8.868995 16.115026 8.868995 16.083304c73.53069 140.294256 248.127194 282.85616 439.567317 282.856159 191.406354 0 366.002858-142.561903 439.998129-282.856159l8.438183-16.083304-8.438183-16.115026zM511.999488 744.779647c-157.75186 0-307.098283-117.343545-375.334387-232.754064 68.237127-115.922173 217.582527-232.738715 375.334387-232.738715 157.718091 0 307.098283 116.816542 375.334388 232.738715-68.269873 115.41052-217.616296 232.754065-375.334388 232.754064z"></path>
-          </svg>
-          </span></a>
-					<input class="uk-input" id="plaintext" name="plaintext" placeholder="Пароль" style="width: 275px;" tabindex="2" type="text">
-				</div>
-			</div>
-		</div>
-		<div class="uk-margin">
-			<div class="uk-form-controls" style="line-height: 1.0;">
-				<button class="uk-button uk-button-primary uk-button-small" id="enterbutton" style="width: 275px;" tabindex="3" type="submit">
-					Войти
-				</button>
-				<span style="font-size: 12px;">Нажимая на кнопку "Войти", я принимаю<br><a class="uk-link-muted" href="https://www.silinet.ru/service/527.html" target="_blank">Пользовательское соглашение</a></span>
-			</div>
-		</div>
-		<div class="uk-margin">
-			<div class="uk-form-controls">
-				<a class="uk-link-muted" id="showrstform" style="font-size: 14px;" tabindex="4" uk-toggle="target: #dialogRestore" aria-expanded="false">Получить
-				                                                                                                                             логин и пароль</a>
-			</div>
-		</div>
-		<div class="uk-margin">
-			<div class="uk-form-controls">
-				<label class="uk-form-label" for="remember_me" style="color: rgb(153, 153, 153)">
-					<input class="uk-checkbox" id="remember_me" name="remember_me" tabindex="5" type="checkbox" value="Y">
-					Запомнить меня</label>
-			</div>
-		</div>
-		<input id="plugin" name="plugin" type="hidden" value="">
-		<input id="rs_uri" name="rs_uri" type="hidden" value="">
-	</form>
-	<div class="uk-margin">
-		<button class="uk-button button-grey uk-button-small" id="tmpInetButton" onclick="enable_tmp_inet(); return false;" style="width: 275px; margin-top: 20px;" tabindex="6">
-			Включить интернет на час
-		</button>
-	</div>
-	<div class="uk-margin"><a class="uk-link-muted" href="https://www.silinet.ru" tabindex="7">SILINET.RU</a>
-	</div>
-</div>
-<div class="uk-flex-top uk-modal" id="dialogRestore" uk-modal="">
-	<div class="uk-modal-dialog uk-margin-auto-vertical">
-		<button class="uk-modal-close-outside uk-icon uk-close" type="button" uk-close=""><svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><line fill="none" stroke="#000" stroke-width="1.1" x1="1" y1="1" x2="13" y2="13"></line><line fill="none" stroke="#000" stroke-width="1.1" x1="13" y1="1" x2="1" y2="13"></line></svg></button>
-		<div class="uk-modal-header">
-			<h1 class="uk-modal-title">Получить логин и пароль</h1>
-		</div>
-		<div class="uk-modal-body ">
-			<div class="uk-grid-small uk-child-width-1-2 uk-text-center uk-grid uk-grid-stack" uk-grid="" uk-height-match="target: > div > .uk-card; row: false">
-				<div>
-					<div class="uk-card uk-card-default uk-card-hover" style="">
-						<div class="uk-card-header">
-							<span class="uk-margin-small-right uk-icon" uk-icon="icon: mail"><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><polyline fill="none" stroke="#000" points="1.4,6.5 10,11 18.6,6.5"></polyline><path d="M 1,4 1,16 19,16 19,4 1,4 Z M 18,15 2,15 2,5 18,5 18,15 Z"></path></svg></span><span class="uk-text-middle">E-MAIL</span>
-						</div>
-						<div class="uk-card-body">
-							<form action="rstpass.php" class="uk-form-stacked" id="restoreformemail">
-								<div class="uk-margin">
-									<div class="uk-form-controls">
-										<input class="uk-input uk-form-small" id="account_id" name="account_id" placeholder="Введите номер счета" tabindex="10" type="text" value="">
-										<input name="dst" type="hidden" value="email">
-									</div>
-								</div>
-								<div class="uk-margin">
-									<div class="uk-form-controls">
-										<button class="uk-button uk-button-primary uk-button-small" type="submit">Отправить</button>
-									</div>
-								</div>
-							</form>
-						</div>
-					</div>
-				</div>
-				<!--<div>
-					<div class = "uk-card uk-card-default uk-card-hover">
-						<div class = "uk-card-header">
-							<span class = "uk-margin-small-right" uk-icon = "icon: comment"></span><span class = "uk-text-middle">SMS</span>
-						</div>
-						<div class = "uk-card-body">
-							<form action = "rstpass.php" class = "uk-form-stacked" id = "restoreformsms">
-								<div class = "uk-margin">
-									<div class = "uk-form-controls">
-										<input class = "uk-input" id = "account_id" name = "account_id" placeholder = "Введите номер счета" tabindex = "10" type = "text" value = ""/>
-										<input name = "dst" type = "hidden" value = "sms">
-									</div>
-								</div>
-								<div class = "uk-margin">
-									<div class = "uk-form-controls">
-										<button class = "uk-button uk-button-primary uk-button-small" type = "submit">Отправить</button>
-									</div>
-								</div>
-							</form>
-						</div>
-					</div>
-				</div>-->
-				<div>
-					<div class="uk-card uk-card-default uk-card-hover" style="">
-						<div class="uk-card-header">
-							<span class="uk-margin-small-right uk-icon" uk-icon="icon: desktop"><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><rect x="8" y="15" width="1" height="2"></rect><rect x="11" y="15" width="1" height="2"></rect><rect x="5" y="16" width="10" height="1"></rect><rect fill="none" stroke="#000" x="1.5" y="3.5" width="17" height="11"></rect></svg></span><span class="uk-text-middle">На экран</span>
-						</div>
-						<div class="uk-card-body">
-							<form action="rstpass.php" class="uk-form-stacked" id="restoreformscreen">
-								<div class="uk-margin">
-									<div class="uk-form-controls">
-										<input class="uk-input uk-form-small" id="account_id" name="account_id" placeholder="Введите номер счета" tabindex="10" type="text" value="">
-										<input class="uk-input uk-form-small" style="margin-top: 5px" id="fio" name="fio" placeholder="Введите фамилию" tabindex="11" type="text" value="">
-										<input class="uk-input uk-form-small" style="margin-top: 5px" id="mob_tel" name="mob_tel" placeholder="+7(___)_______" tabindex="12" type="text" value="" maxlength="14">
-										<input name="dst" type="hidden" value="screen">
-									</div>
-								</div>
-								<div class="uk-margin">
-									<div class="uk-form-controls">
-										<button class="uk-button uk-button-primary uk-button-small" type="submit">Отправить</button>
-									</div>
-								</div>
-							</form>
-						</div>
-					</div>
-				</div>
-				<div>
-					<div class="uk-card uk-card-default uk-card-hover" style="">
-						<div class="uk-card-header uk-text-middle">
-							<span class="uk-margin-small-right uk-icon" uk-icon="icon: receiver"><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill="none" stroke="#000" stroke-width="1.01" d="M6.189,13.611C8.134,15.525 11.097,18.239 13.867,18.257C16.47,18.275 18.2,16.241 18.2,16.241L14.509,12.551L11.539,13.639L6.189,8.29L7.313,5.355L3.76,1.8C3.76,1.8 1.732,3.537 1.7,6.092C1.667,8.809 4.347,11.738 6.189,13.611"></path></svg></span><span class="uk-text-middle">ТЕЛЕФОН</span>
-						</div>
-						<div class="uk-card-body"><b>+7 495 641 53 07</b></div>
-					</div>
-				</div>
-				<div>
-					<div class="uk-card uk-card-default uk-card-hover" style="">
-						<div class="uk-card-header">
-							<span class="uk-margin-small-right uk-icon" uk-icon="icon: home"><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><polygon points="18.65 11.35 10 2.71 1.35 11.35 0.65 10.65 10 1.29 19.35 10.65"></polygon><polygon points="15 4 18 4 18 7 17 7 17 5 15 5"></polygon><polygon points="3 11 4 11 4 18 7 18 7 12 12 12 12 18 16 18 16 11 17 11 17 19 11 19 11 13 8 13 8 19 3 19"></polygon></svg></span><span class="uk-text-middle">ЦЕНТР ОБСЛУЖИВАНИЯ</span>
-						</div>
-						<div class="uk-card-body uk-text-left">
-							<a class="uk-link-muted" href="https://www.google.ru/maps/place/%D0%9F%D0%BE%D1%87%D1%82%D0%BE%D0%B2%D0%B0%D1%8F+%D1%83%D0%BB.,+4,+%D0%9F%D0%BE%D0%B4%D0%BE%D0%BB%D1%8C%D1%81%D0%BA,+%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F+%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C/@55.4766849,37.5671612,18z/data=!4m2!3m1!1s0x414aa922ee2e6aeb:0x91c9d6d756eaa339" target="_blank">Подольск,
-							                                                                                                                                                                                                                                                                                                                                                                                                     Почтовая 4</a><br>
-							с 9.00 до 20.00, ежедневно без выходных и перерывов
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
 
+		<nav>
+			<div class="uk-flex uk-align-center"  style="background-color: #009933; margin-bottom: 1rem;">
+				<ul class="uk-flex uk-width-1-1 uk-flex-center uk-flex list-flex-gap uk-text-nowrap uk-margin-auto">
+					<li class="list-style-none"><a href="https://www.silinet.ru/" class="text-ul text-shadow link-hover">На сайт</a></li>
+					<li class="list-style-none"><a href="https://www.silinet.ru/promo.html" class="text-ul text-shadow link-hover">Акции</a></li>
+					<li class="list-style-none">
+						<a href="https://www.silinet.ru/set/settings.html" class="text-ul text-shadow link-hover">Настройки</a>
+					</li>
+					<li  class="list-style-none"><a href="https://www.silinet.ru/contacts.html" class="text-ul text-shadow link-hover">Контакты</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+	<div class="uk-container">
+	<main>
+		<div class="main_menu">
+			<button class="uk-button uk-button-primary uk-border-rounded uk-box-shadow-hover uk-margin-small-bottom uk-text-nowrap hover uk-flex" type="button">
+				<div class="btn-group uk-flex uk-flex-between">
+					<span class="uk-margin-right">Меню</span><span class="uk-flex" uk-icon="icon: menu"></span>
+				</div>
+			</button>
+			<div uk-dropdown="mode: click" class="uk-margin-auto-left">
+				<ul class="uk-nav uk-dropdown-nav">
+					<li class="main_menu_item" id="menu_item_info" style="background-color: rgb(232, 232, 232);">
+						<a class="link-hover"
+								href="?plugin=info"
+						   uk-tooltip="title: Информация о подключенных услугах; pos: left"
+						   title=""
+						   aria-describedby="uk-tooltip-1">
+							Общая информация
+						</a>
+					</li>
+					<li class="main_menu_item" id="menu_item_pay_services">
+						<a class="link-hover" href="?plugin=pay_services" uk-tooltip="title: Пополнение счета различными методами; pos: left"
+						   title="" aria-describedby="uk-tooltip-2">Пополнение счета</a>
+					</li>
+					<li class="main_menu_item" id="menu_item_promised_payment">
+						<a class="link-hover" href="?plugin=promised_payment" uk-tooltip="title: Обещанный платеж; pos: left" title=""
+						   aria-describedby="uk-tooltip-3">Обещанный платеж</a>
+					</li>
+					<li class="main_menu_item" id="menu_item_transfer">
+						<a class="link-hover" href="?plugin=transfer" uk-tooltip="title: Перевод на другой счет; pos: left" title=""
+						   aria-describedby="uk-tooltip-4">Перевод между счетами</a>
+					</li>
+					<li class="main_menu_item" id="menu_item_services">
+						<a class="link-hover" href="?plugin=services" uk-tooltip="title: Подключение дополнительных услуг; pos: left" title=""
+						   aria-describedby="uk-tooltip-5">Услуги</a>
+					</li>
+					<li class="main_menu_item" id="menu_item_payment">
+						<a class="link-hover" href="?plugin=payment" uk-tooltip="title: Список поступивших платежей; pos: left" title=""
+						   aria-describedby="uk-tooltip-6">Отчет по платежам</a>
+					</li>
+					<li class="main_menu_item" id="menu_item_services_report">
+						<a class="link-hover" href="?plugin=services_report" uk-tooltip="title: Отчет по списаниям за услуги; pos: left"
+						   title="" aria-describedby="uk-tooltip-7">Отчет по списаниям</a>
+					</li>
+					<li class="main_menu_item" id="menu_item_traffic_report">
+						<a class="link-hover" href="?plugin=traffic_report" uk-tooltip="title: Отчет по использованному трафику; pos: left"
+						   title="" aria-describedby="uk-tooltip-8">Отчет по трафику</a>
+					</li>
+					<li class="main_menu_item" id="menu_item_rent">
+						<a class="link-hover" href="?plugin=rent" uk-tooltip="title: Аренда оборудования; pos: left" title=""
+						   aria-describedby="uk-tooltip-9">Аренда оборудования</a>
+					</li>
+					<!--
+                    <li class = "main_menu_item" id = "menu_item_rentsoft">
+                        <a href = "?plugin=rentsoft" uk-tooltip = "title: Аренда программ через Rentsoft.ru; pos: left">Аренда программ</a>
+                    </li>-->
+					<li class="main_menu_item" id="menu_item_tariff">
+						<a class="link-hover" href="?plugin=tariff" uk-tooltip="title: Смена тарифа на следующий отчетный период; pos: left"
+						   title="" aria-describedby="uk-tooltip-10">Сменить тариф</a>
+					</li>
+					<li class="main_menu_item" id="menu_item_password">
+						<a class="link-hover" href="?plugin=password" uk-tooltip="title: Смена пароля доступа в личный кабинет; pos: left"
+						   title="" aria-describedby="uk-tooltip-11">Сменить пароль</a>
+					</li>
+					<li class="main_menu_item" id="menu_item_block">
+						<a class="link-hover" href="?plugin=block" uk-tooltip="title: Добровольная блокировка; pos: left" title=""
+						   aria-describedby="uk-tooltip-12">Блокировка</a>
+					</li>
+					<li class="main_menu_item" id="menu_item_message">
+						<a class="link-hover" href="?plugin=message" uk-tooltip="title: Отправка сообщений администрации; pos: left" title=""
+						   aria-describedby="uk-tooltip-13">Сообщения</a>
+					</li>
+					<li class="main_menu_item" id="menu_item_contacts">
+						<a class="link-hover" href="?plugin=contacts" uk-tooltip="title: Изменение контактной информации; pos: left" title=""
+						   aria-describedby="uk-tooltip-14">Мои контакты</a>
+					</li>
+					<li class="uk-nav-divider"></li>
+					<li class="main_menu_item">
+						<a class="link-hover" href="/info.php?plugin=logout" uk-tooltip="title: Выход из личного кабинета; pos: left" title=""
+						   aria-describedby="uk-tooltip-15"><strong><font color="#009900">Выход</font></strong></a>
+					</li>
+					<li class="uk-nav-divider"></li>
+				</ul>
+			</div>
+		</div>
+		<div class="uk-panel uk-background-default uk-box-shadow-small uk-padding-small uk-border-rounded uk-margin-small-bottom">
+			<ul class="uk-list uk-list-divider text" style="color: black;" id="main-menu2">
+				<li>
+					<strong>Герасимов Кирилл Юрьевич</strong>
+				</li>
+				<li>
+					<span>Адрес:</span>
+					<span><strong>Подольск, Быковская 15 </strong></span>
+				</li>
+				<li>
+					<span>Ваш баланс:</span>
+					<span><strong>7,28 р.</strong></span>
+				</li>
+				<li>
+					<span>Лицевой счёт:</span>
+					<strong>11959</strong>
+				</li>
+				<li>
+					<span>Статус:</span>
+					<strong>Активен</strong>
+				</li>
+				<li>
+					<span>Оплачено до:</span>
+					<strong>--.--.----</strong>
+				</li>
+			</ul>
+		</div>
+
+		<div class="uk-panel uk-background-default uk-box-shadow-small uk-padding-small uk-border-rounded uk-margin-small-bottom"  style="color: black;">
+			<div>
+				<span class="uk-table-expand">Услуга</span>
+				<span class="uk-table-shrink">Аб.плата</span>
+				<span class="uk-table-shrink uk-text-nowrap">Списано в текущем месяце</span>
+			</div>
+			<div><a uk-tooltip="title: Нажмите, чтобы увидеть информацию о трафике; pos: right"
+					href="?plugin=traffic_report&amp;action=show_traf&amp;id=32015" title=""
+					aria-describedby="uk-tooltip-16">admins</a> (0 Мбит/c)
+			</div>
+			<span class="uk-text-nowrap"><strong>0,00</strong> р.</span>
+			<span class="uk-text-nowrap"><strong>0,00</strong> р.</span>
+		</div>
+
+		<div class="uk-panel uk-background-default uk-padding-small uk-border-rounded uk-box-shadow-small uk-text-left"  style="color: black;">
+			<span class="uk-label uk-label-warning">Внимание</span>&nbsp;Все операции, осуществляемые через личный
+			кабинет, считаются самостоятельными
+			действиями абонента и фиксируются на сервере. Ни при каких обстоятельствах не передавайте логин и пароль
+			другим лицам!
+		</div>
+	</main>
+	<!--    </tbody>-->
+</div>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.15.22/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.15.22/dist/js/uikit-icons.min.js"></script>
+<script type="module" src="/main.js"></script>
 </body>
-	<script src="https://cdn.jsdelivr.net/npm/uikit@3.15.22/dist/js/uikit.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.22/dist/js/uikit-icons.min.js"></script>
-    <script type="module" src="/main.js"></script>
-  </body>
 </html>
