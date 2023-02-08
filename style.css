@@ -36,6 +36,7 @@
 .link-hover:hover {
   color: brown!important;
   transition: all 0.3s;
+  text-decoration: underline;
 }
 
 .box-shadow {
@@ -61,5 +62,11 @@
   }
   .logo-img {
     width: calc(100% * 1 / 2.001);
+  }
+}
+
+@media (min-width: 577px) {
+  #btn-menu {
+    display: none;
   }
 }
